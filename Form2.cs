@@ -16,7 +16,7 @@ namespace WinFormsApp1
     public partial class Form2 : Form
     {
         public Token token = new Token();
-
+        public ListView lv = new ListView();
         public Form2()
         {
             InitializeComponent();
@@ -32,9 +32,7 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-
-            token = new Token(form1.listView1.Items.Count + 1, 
+            token = new Token(lv.Items.Count, 
                 comboBox1.SelectedItem.ToString(),
                 textBox1.Text,
                 comboBox2.SelectedItem.ToString(),
@@ -48,7 +46,7 @@ namespace WinFormsApp1
                 dateTimePicker2.Value
                 );
 
-            form1.Tokens.Append(token);
+            Form1.Tokens.Append(token);
 
             this.Close();
         }

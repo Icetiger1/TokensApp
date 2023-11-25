@@ -41,7 +41,7 @@ namespace WinFormsApp1.ViewModel
             }
         }
 
-        public void Remove(int id)
+        public void Delete(int id)
         {
             var item = this.Tokens.FirstOrDefault(x => x.Id == id);
             if (item != null)

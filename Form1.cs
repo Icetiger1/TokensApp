@@ -6,7 +6,7 @@ namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
-        public TokensViewModel Tokens = new();
+        public static TokensViewModel Tokens = new();
         public Form1()
         {
             InitializeComponent();
@@ -14,7 +14,7 @@ namespace WinFormsApp1
             TokensCreator tokenCreator = new();
             for (int i = 0; i < 5; i++)
             {
-                this.Tokens.Append((Token)tokenCreator.GetContact());
+                Tokens.Append((Token)tokenCreator.GetContact());
             }
 
             Tokens.AddToListView(listView1);
@@ -23,11 +23,22 @@ namespace WinFormsApp1
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
+            f2.lv = listView1;
             f2.Show();
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
+
+            Tokens.AddToListView(listView1);
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            int index = listView1.SelectedIndices[0];
+            Tokens.Delete(int.Parse(listView1.Items[index].SubItems[0].Text));
+
             listView1.Items.Clear();
 
             Tokens.AddToListView(listView1);

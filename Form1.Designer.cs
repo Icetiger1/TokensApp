@@ -63,7 +63,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3, toolStripSeparator1, toolStripComboBox1, toolStripComboBox2, toolStripSplitButton1, toolStripTextBox1, toolStripButton4 });
             toolStrip1.Location = new Point(12, 9);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(427, 25);
+            toolStrip1.Size = new Size(473, 25);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -85,15 +85,16 @@
             toolStripButton2.Name = "toolStripButton2";
             toolStripButton2.Size = new Size(25, 22);
             toolStripButton2.Text = "toolStripButton2";
+            toolStripButton2.Click += toolStripButton2_Click;
             // 
             // toolStripButton3
             // 
-            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
             toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
             toolStripButton3.ImageTransparentColor = Color.Magenta;
             toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(25, 22);
-            toolStripButton3.Text = "toolStripButton3";
+            toolStripButton3.Size = new Size(71, 22);
+            toolStripButton3.Text = "Обновить";
             toolStripButton3.Click += toolStripButton3_Click;
             // 
             // toolStripSeparator1
@@ -128,16 +129,18 @@
             toolStripButton4.Image = (Image)resources.GetObject("toolStripButton4.Image");
             toolStripButton4.ImageTransparentColor = Color.Magenta;
             toolStripButton4.Name = "toolStripButton4";
-            toolStripButton4.Size = new Size(48, 22);
+            toolStripButton4.Size = new Size(48, 21);
             toolStripButton4.Text = "Поиск";
             // 
             // listView1
             // 
             listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             listView1.Columns.AddRange(new ColumnHeader[] { ID, Type, FIO, Department, Destiny, Action, SerialNumber, InterCertCenter, RootCertCenter, Status, DateStart, DateEnd });
+            listView1.FullRowSelect = true;
             listView1.Location = new Point(12, 39);
+            listView1.MultiSelect = false;
             listView1.Name = "listView1";
-            listView1.Size = new Size(888, 457);
+            listView1.Size = new Size(1168, 457);
             listView1.TabIndex = 1;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
@@ -164,7 +167,7 @@
             // Destiny
             // 
             Destiny.Text = "Назначение";
-            Destiny.Width = 80;
+            Destiny.Width = 100;
             // 
             // Action
             // 
@@ -174,15 +177,17 @@
             // SerialNumber
             // 
             SerialNumber.Text = "Серийный номер";
-            SerialNumber.Width = 100;
+            SerialNumber.Width = 150;
             // 
             // InterCertCenter
             // 
             InterCertCenter.Text = "Промежуточный УЦ";
+            InterCertCenter.Width = 100;
             // 
             // RootCertCenter
             // 
             RootCertCenter.Text = "Корневой УЦ";
+            RootCertCenter.Width = 100;
             // 
             // Status
             // 
@@ -191,18 +196,18 @@
             // DateStart
             // 
             DateStart.Text = "Дата начала";
-            DateStart.Width = 80;
+            DateStart.Width = 120;
             // 
             // DateEnd
             // 
             DateEnd.Text = "Дата окончания";
-            DateEnd.Width = 80;
+            DateEnd.Width = 120;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(912, 510);
+            ClientSize = new Size(1192, 510);
             Controls.Add(listView1);
             Controls.Add(toolStrip1);
             Name = "Form1";
