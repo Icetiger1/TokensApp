@@ -29,210 +29,189 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.ID = new System.Windows.Forms.ColumnHeader();
-            this.Type = new System.Windows.Forms.ColumnHeader();
-            this.FIO = new System.Windows.Forms.ColumnHeader();
-            this.Department = new System.Windows.Forms.ColumnHeader();
-            this.Destiny = new System.Windows.Forms.ColumnHeader();
-            this.Action = new System.Windows.Forms.ColumnHeader();
-            this.SerialNumber = new System.Windows.Forms.ColumnHeader();
-            this.InterCertCenter = new System.Windows.Forms.ColumnHeader();
-            this.RootCertCenter = new System.Windows.Forms.ColumnHeader();
-            this.Status = new System.Windows.Forms.ColumnHeader();
-            this.DateStart = new System.Windows.Forms.ColumnHeader();
-            this.DateEnd = new System.Windows.Forms.ColumnHeader();
-            this.toolStrip1.SuspendLayout();
-            this.SuspendLayout();
+            toolStrip1 = new ToolStrip();
+            toolStripButton1 = new ToolStripButton();
+            toolStripButton2 = new ToolStripButton();
+            toolStripButton3 = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            toolStripComboBox1 = new ToolStripLabel();
+            toolStripComboBox2 = new ToolStripComboBox();
+            toolStripSplitButton1 = new ToolStripSeparator();
+            toolStripTextBox1 = new ToolStripTextBox();
+            toolStripButton4 = new ToolStripButton();
+            listView1 = new ListView();
+            ID = new ColumnHeader();
+            Type = new ColumnHeader();
+            FIO = new ColumnHeader();
+            Department = new ColumnHeader();
+            Destiny = new ColumnHeader();
+            Action = new ColumnHeader();
+            SerialNumber = new ColumnHeader();
+            InterCertCenter = new ColumnHeader();
+            RootCertCenter = new ColumnHeader();
+            Status = new ColumnHeader();
+            DateStart = new ColumnHeader();
+            DateEnd = new ColumnHeader();
+            toolStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripSeparator1,
-            this.toolStripComboBox1,
-            this.toolStripComboBox2,
-            this.toolStripSplitButton1,
-            this.toolStripTextBox1,
-            this.toolStripButton4});
-            this.toolStrip1.Location = new System.Drawing.Point(5, 6);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(415, 25);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            toolStrip1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            toolStrip1.Dock = DockStyle.None;
+            toolStrip1.ImageScalingSize = new Size(18, 18);
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3, toolStripSeparator1, toolStripComboBox1, toolStripComboBox2, toolStripSplitButton1, toolStripTextBox1, toolStripButton4 });
+            toolStrip1.Location = new Point(12, 9);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(427, 25);
+            toolStrip1.TabIndex = 0;
+            toolStrip1.Text = "toolStrip1";
             // 
             // toolStripButton1
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::WinFormsApp1.Properties.Resources.add;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton1.Image = Properties.Resources.add;
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(25, 22);
+            toolStripButton1.Text = "toolStripButton1";
+            toolStripButton1.Click += toolStripButton1_Click;
             // 
             // toolStripButton2
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::WinFormsApp1.Properties.Resources.del;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
+            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton2.Image = Properties.Resources.del;
+            toolStripButton2.ImageTransparentColor = Color.Magenta;
+            toolStripButton2.Name = "toolStripButton2";
+            toolStripButton2.Size = new Size(25, 22);
+            toolStripButton2.Text = "toolStripButton2";
             // 
             // toolStripButton3
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "toolStripButton3";
+            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
+            toolStripButton3.ImageTransparentColor = Color.Magenta;
+            toolStripButton3.Name = "toolStripButton3";
+            toolStripButton3.Size = new Size(25, 22);
+            toolStripButton3.Text = "toolStripButton3";
+            toolStripButton3.Click += toolStripButton3_Click;
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 25);
             // 
             // toolStripComboBox1
             // 
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(51, 22);
-            this.toolStripComboBox1.Text = "Фильтр:";
+            toolStripComboBox1.Name = "toolStripComboBox1";
+            toolStripComboBox1.Size = new Size(54, 22);
+            toolStripComboBox1.Text = "Фильтр:";
             // 
             // toolStripComboBox2
             // 
-            this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 25);
+            toolStripComboBox2.Name = "toolStripComboBox2";
+            toolStripComboBox2.Size = new Size(121, 25);
             // 
             // toolStripSplitButton1
             // 
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(6, 25);
+            toolStripSplitButton1.Name = "toolStripSplitButton1";
+            toolStripSplitButton1.Size = new Size(6, 25);
             // 
             // toolStripTextBox1
             // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
+            toolStripTextBox1.Name = "toolStripTextBox1";
+            toolStripTextBox1.Size = new Size(100, 25);
             // 
             // toolStripButton4
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(46, 22);
-            this.toolStripButton4.Text = "Поиск";
+            toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton4.Image = (Image)resources.GetObject("toolStripButton4.Image");
+            toolStripButton4.ImageTransparentColor = Color.Magenta;
+            toolStripButton4.Name = "toolStripButton4";
+            toolStripButton4.Size = new Size(48, 22);
+            toolStripButton4.Text = "Поиск";
             // 
             // listView1
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ID,
-            this.Type,
-            this.FIO,
-            this.Department,
-            this.Destiny,
-            this.Action,
-            this.SerialNumber,
-            this.InterCertCenter,
-            this.RootCertCenter,
-            this.Status,
-            this.DateStart,
-            this.DateEnd});
-            this.listView1.Location = new System.Drawing.Point(12, 34);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(888, 404);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listView1.Columns.AddRange(new ColumnHeader[] { ID, Type, FIO, Department, Destiny, Action, SerialNumber, InterCertCenter, RootCertCenter, Status, DateStart, DateEnd });
+            listView1.Location = new Point(12, 39);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(888, 457);
+            listView1.TabIndex = 1;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
             // 
             // ID
             // 
-            this.ID.Text = "№";
-            this.ID.Width = 40;
+            ID.Text = "№";
+            ID.Width = 40;
             // 
             // Type
             // 
-            this.Type.Text = "Тип";
+            Type.Text = "Тип";
             // 
             // FIO
             // 
-            this.FIO.Text = "ФИО";
-            this.FIO.Width = 100;
+            FIO.Text = "ФИО";
+            FIO.Width = 100;
             // 
             // Department
             // 
-            this.Department.Text = "Отдел";
-            this.Department.Width = 80;
+            Department.Text = "Отдел";
+            Department.Width = 80;
             // 
             // Destiny
             // 
-            this.Destiny.Text = "Назначение";
-            this.Destiny.Width = 80;
+            Destiny.Text = "Назначение";
+            Destiny.Width = 80;
             // 
             // Action
             // 
-            this.Action.Text = "Действия";
-            this.Action.Width = 80;
+            Action.Text = "Действия";
+            Action.Width = 80;
             // 
             // SerialNumber
             // 
-            this.SerialNumber.Text = "Серийный номер";
-            this.SerialNumber.Width = 100;
+            SerialNumber.Text = "Серийный номер";
+            SerialNumber.Width = 100;
             // 
             // InterCertCenter
             // 
-            this.InterCertCenter.Text = "Промежуточный УЦ";
+            InterCertCenter.Text = "Промежуточный УЦ";
             // 
             // RootCertCenter
             // 
-            this.RootCertCenter.Text = "Корневой УЦ";
+            RootCertCenter.Text = "Корневой УЦ";
             // 
             // Status
             // 
-            this.Status.Text = "Статус";
+            Status.Text = "Статус";
             // 
             // DateStart
             // 
-            this.DateStart.Text = "Дата начала";
-            this.DateStart.Width = 80;
+            DateStart.Text = "Дата начала";
+            DateStart.Width = 80;
             // 
             // DateEnd
             // 
-            this.DateEnd.Text = "Дата окончания";
-            this.DateEnd.Width = 80;
+            DateEnd.Text = "Дата окончания";
+            DateEnd.Width = 80;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 450);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.toolStrip1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(912, 510);
+            Controls.Add(listView1);
+            Controls.Add(toolStrip1);
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Form1";
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -247,7 +226,6 @@
         private ToolStripSeparator toolStripSplitButton1;
         private ToolStripTextBox toolStripTextBox1;
         private ToolStripButton toolStripButton4;
-        private ListView listView1;
         private ColumnHeader ID;
         private ColumnHeader Type;
         private ColumnHeader FIO;
@@ -260,5 +238,6 @@
         private ColumnHeader Status;
         private ColumnHeader DateStart;
         private ColumnHeader DateEnd;
+        public ListView listView1;
     }
 }

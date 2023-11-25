@@ -6,17 +6,33 @@ namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
+        public TokensViewModel Tokens = new();
         public Form1()
         {
             InitializeComponent();
+
+            //создаем начальные значения
             TokensCreator tokenCreator = new();
-            TokensViewModel tokens = new();
             for (int i = 0; i < 5; i++)
             {
-                tokens.Append((Token)tokenCreator.GetContact());
+                this.Tokens.Append((Token)tokenCreator.GetContact());
             }
 
-            tokens.AddToListView(listView1);
+            //заполняем форму
+            Tokens.AddToListView(listView1);
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            //заполняем форму
+            Tokens.AddToListView(listView1);
         }
     }
 }
