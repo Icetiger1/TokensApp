@@ -11,14 +11,12 @@ namespace WinFormsApp1
         {
             InitializeComponent();
 
-            //создаем начальные значения
             TokensCreator tokenCreator = new();
             for (int i = 0; i < 5; i++)
             {
                 this.Tokens.Append((Token)tokenCreator.GetContact());
             }
 
-            //заполняем форму
             Tokens.AddToListView(listView1);
         }
 
@@ -31,7 +29,7 @@ namespace WinFormsApp1
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
-            //заполняем форму
+
             Tokens.AddToListView(listView1);
         }
     }
