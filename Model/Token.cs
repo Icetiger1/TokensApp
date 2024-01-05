@@ -9,15 +9,15 @@ namespace WinFormsApp1.Model
     public class Token
     {
         public int Id { get; set; }
-        public string Type { get; set; }
-        public string FIO { get; set; }
-        public string Department { get; set; }
-        public string Destiny { get; set; }
-        public string Action { get; set; }
-        public string SerialNumber { get; set; }
-        public string InterCertCenter { get; set; }
-        public string RootCertCenter { get; set; }
-        public string Status { get; set; }
+        public string? Type { get; set; }
+        public string? FIO { get; set; }
+        public string? Department { get; set; }
+        public string? Destiny { get; set; }
+        public string? Action { get; set; }
+        public string? SerialNumber { get; set; }
+        public string? InterCertCenter { get; set; }
+        public string? RootCertCenter { get; set; }
+        public string? Status { get; set; }
         public DateTime DateStart { get; set; }
         public DateTime DateEnd { get; set; }
 
@@ -37,15 +37,15 @@ namespace WinFormsApp1.Model
         { }
         public Token(
             int id, 
-            string type, 
-            string fio, 
-            string department, 
-            string destiny, 
-            string action, 
-            string serialNumber,
-            string interCertCenter,
-            string rootCertCenter,
-            string status,
+            string? type, 
+            string? fio, 
+            string? department, 
+            string? destiny, 
+            string? action, 
+            string? serialNumber,
+            string? interCertCenter,
+            string? rootCertCenter,
+            string? status,
             DateTime dateStart,
             DateTime dateEnd
             )
