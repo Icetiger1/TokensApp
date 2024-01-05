@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             toolStrip1 = new ToolStrip();
-            toolStripButton1 = new ToolStripButton();
-            toolStripButton2 = new ToolStripButton();
-            toolStripButton3 = new ToolStripButton();
+            OpenAddTokenFormButton = new ToolStripButton();
+            DeleteTokenButton = new ToolStripButton();
+            RefreshButton = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             toolStripComboBox1 = new ToolStripLabel();
             toolStripComboBox2 = new ToolStripComboBox();
             toolStripSplitButton1 = new ToolStripSeparator();
             toolStripTextBox1 = new ToolStripTextBox();
-            toolStripButton4 = new ToolStripButton();
+            SearchButton = new ToolStripButton();
             listView1 = new ListView();
             ID = new ColumnHeader();
             Type = new ColumnHeader();
@@ -60,42 +60,42 @@
             toolStrip1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             toolStrip1.Dock = DockStyle.None;
             toolStrip1.ImageScalingSize = new Size(18, 18);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3, toolStripSeparator1, toolStripComboBox1, toolStripComboBox2, toolStripSplitButton1, toolStripTextBox1, toolStripButton4 });
-            toolStrip1.Location = new Point(12, 9);
+            toolStrip1.Items.AddRange(new ToolStripItem[] { OpenAddTokenFormButton, DeleteTokenButton, RefreshButton, toolStripSeparator1, toolStripComboBox1, toolStripComboBox2, toolStripSplitButton1, toolStripTextBox1, SearchButton });
+            toolStrip1.Location = new Point(12, 8);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(473, 25);
+            toolStrip1.Size = new Size(485, 25);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // OpenAddTokenFormButton
             // 
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton1.Image = Properties.Resources.add;
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(25, 22);
-            toolStripButton1.Text = "toolStripButton1";
-            toolStripButton1.Click += toolStripButton1_Click;
+            OpenAddTokenFormButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            OpenAddTokenFormButton.Image = Properties.Resources.add;
+            OpenAddTokenFormButton.ImageTransparentColor = Color.Magenta;
+            OpenAddTokenFormButton.Name = "OpenAddTokenFormButton";
+            OpenAddTokenFormButton.Size = new Size(23, 22);
+            OpenAddTokenFormButton.Text = "toolStripButton1";
+            OpenAddTokenFormButton.Click += OpenAddTokenFormButton_Click;
             // 
-            // toolStripButton2
+            // DeleteTokenButton
             // 
-            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton2.Image = Properties.Resources.del;
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(25, 22);
-            toolStripButton2.Text = "toolStripButton2";
-            toolStripButton2.Click += toolStripButton2_Click;
+            DeleteTokenButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            DeleteTokenButton.Image = Properties.Resources.del;
+            DeleteTokenButton.ImageTransparentColor = Color.Magenta;
+            DeleteTokenButton.Name = "DeleteTokenButton";
+            DeleteTokenButton.Size = new Size(23, 22);
+            DeleteTokenButton.Text = "toolStripButton2";
+            DeleteTokenButton.Click += DeleteTokenButton_Click;
             // 
-            // toolStripButton3
+            // RefreshButton
             // 
-            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
-            toolStripButton3.ImageTransparentColor = Color.Magenta;
-            toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(71, 22);
-            toolStripButton3.Text = "Обновить";
-            toolStripButton3.Click += toolStripButton3_Click;
+            RefreshButton.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            RefreshButton.Image = (Image)resources.GetObject("RefreshButton.Image");
+            RefreshButton.ImageTransparentColor = Color.Magenta;
+            RefreshButton.Name = "RefreshButton";
+            RefreshButton.Size = new Size(65, 22);
+            RefreshButton.Text = "Обновить";
+            RefreshButton.Click += RefreshButton_Click;
             // 
             // toolStripSeparator1
             // 
@@ -105,7 +105,7 @@
             // toolStripComboBox1
             // 
             toolStripComboBox1.Name = "toolStripComboBox1";
-            toolStripComboBox1.Size = new Size(54, 22);
+            toolStripComboBox1.Size = new Size(51, 22);
             toolStripComboBox1.Text = "Фильтр:";
             // 
             // toolStripComboBox2
@@ -123,24 +123,25 @@
             toolStripTextBox1.Name = "toolStripTextBox1";
             toolStripTextBox1.Size = new Size(100, 25);
             // 
-            // toolStripButton4
+            // SearchButton
             // 
-            toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton4.Image = (Image)resources.GetObject("toolStripButton4.Image");
-            toolStripButton4.ImageTransparentColor = Color.Magenta;
-            toolStripButton4.Name = "toolStripButton4";
-            toolStripButton4.Size = new Size(48, 21);
-            toolStripButton4.Text = "Поиск";
+            SearchButton.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            SearchButton.Image = (Image)resources.GetObject("SearchButton.Image");
+            SearchButton.ImageTransparentColor = Color.Magenta;
+            SearchButton.Name = "SearchButton";
+            SearchButton.Size = new Size(46, 22);
+            SearchButton.Text = "Поиск";
+            SearchButton.Click += SearchButton_Click;
             // 
             // listView1
             // 
             listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             listView1.Columns.AddRange(new ColumnHeader[] { ID, Type, FIO, Department, Destiny, Action, SerialNumber, InterCertCenter, RootCertCenter, Status, DateStart, DateEnd });
             listView1.FullRowSelect = true;
-            listView1.Location = new Point(12, 39);
+            listView1.Location = new Point(12, 34);
             listView1.MultiSelect = false;
             listView1.Name = "listView1";
-            listView1.Size = new Size(1168, 457);
+            listView1.Size = new Size(1168, 404);
             listView1.TabIndex = 1;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
@@ -203,16 +204,16 @@
             DateEnd.Text = "Дата окончания";
             DateEnd.Width = 120;
             // 
-            // Form1
+            // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1192, 510);
+            ClientSize = new Size(1192, 450);
             Controls.Add(listView1);
             Controls.Add(toolStrip1);
-            Name = "Form1";
+            Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "MainForm";
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ResumeLayout(false);
@@ -222,15 +223,15 @@
         #endregion
 
         private ToolStrip toolStrip1;
-        private ToolStripButton toolStripButton1;
-        private ToolStripButton toolStripButton2;
-        private ToolStripButton toolStripButton3;
+        private ToolStripButton OpenAddTokenFormButton;
+        private ToolStripButton DeleteTokenButton;
+        private ToolStripButton RefreshButton;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripLabel toolStripComboBox1;
         private ToolStripComboBox toolStripComboBox2;
         private ToolStripSeparator toolStripSplitButton1;
         private ToolStripTextBox toolStripTextBox1;
-        private ToolStripButton toolStripButton4;
+        private ToolStripButton SearchButton;
         private ColumnHeader ID;
         private ColumnHeader Type;
         private ColumnHeader FIO;

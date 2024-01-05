@@ -66,8 +66,9 @@ namespace WinFormsApp1.Model
 
         public ListViewItem AddToListViewItem()
         {
-            ListViewItem item = new ListViewItem(this.Id.ToString());
-            //ListViewItem.ListViewSubItem sub = new();
+            ListViewItem item = new(this.Id.ToString());
+
+            ListViewItem.ListViewSubItem sub1 = new();
             ListViewItem.ListViewSubItem sub2 = new();
             ListViewItem.ListViewSubItem sub3 = new();
             ListViewItem.ListViewSubItem sub4 = new();
@@ -78,34 +79,34 @@ namespace WinFormsApp1.Model
             ListViewItem.ListViewSubItem sub9 = new();
             ListViewItem.ListViewSubItem sub10 = new();
             ListViewItem.ListViewSubItem sub11 = new();
-            ListViewItem.ListViewSubItem sub12 = new();
 
-            //sub.Text = this.Id.ToString();
-            sub2.Text = this.Type;
-            sub3.Text = this.FIO;
-            sub4.Text = this.Department;
-            sub5.Text = this.Destiny;
-            sub6.Text = this.Action;
-            sub7.Text = this.SerialNumber;
-            sub8.Text = this.InterCertCenter;
-            sub9.Text = this.RootCertCenter;
-            sub10.Text = this.Status;
-            sub11.Text = this.DateStart.ToString();
-            sub12.Text = this.DateEnd.ToString();
 
-            item.SubItems.AddRange(new[] { 
-                //sub, 
-                sub2, 
-                sub3, 
-                sub4, 
-                sub5, 
-                sub6, 
-                sub7, 
-                sub8, 
-                sub9, 
-                sub10, 
-                sub11, 
-                sub12 });
+            sub1.Text = this.Type;
+            sub2.Text = this.FIO;
+            sub3.Text = this.Department;
+            sub4.Text = this.Destiny;
+            sub5.Text = this.Action;
+            sub6.Text = this.SerialNumber;
+            sub7.Text = this.InterCertCenter;
+            sub8.Text = this.RootCertCenter;
+            sub9.Text = this.Status;
+            sub10.Text = this.DateStart.ToString();
+            sub11.Text = this.DateEnd.ToString();
+
+            item.SubItems.AddRange(new[] 
+            {
+                sub1,
+                sub2,
+                sub3,
+                sub4,
+                sub5,
+                sub6,
+                sub7,
+                sub8,
+                sub9,
+                sub10,
+                sub11,
+            });
 
             return item;
         }

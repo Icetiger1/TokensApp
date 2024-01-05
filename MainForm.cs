@@ -1,13 +1,14 @@
-using WinFormsApp1.Infrastucture;
+using WinFormsApp1.Infrastructure;
 using WinFormsApp1.Model;
 using WinFormsApp1.ViewModel;
 
 namespace WinFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         public static TokensViewModel Tokens = new();
-        public Form1()
+
+        public MainForm()
         {
             InitializeComponent();
 
@@ -20,21 +21,23 @@ namespace WinFormsApp1
             Tokens.AddToListView(listView1);
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void OpenAddTokenFormButton_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
-            f2.lv = listView1;
+            AddTokenForm f2 = new()
+            {
+                lv = listView1
+            };
             f2.Show();
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
+        private void RefreshButton_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
 
             Tokens.AddToListView(listView1);
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void DeleteTokenButton_Click(object sender, EventArgs e)
         {
             int index = listView1.SelectedIndices[0];
             Tokens.Delete(int.Parse(listView1.Items[index].SubItems[0].Text));
@@ -42,6 +45,11 @@ namespace WinFormsApp1
             listView1.Items.Clear();
 
             Tokens.AddToListView(listView1);
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

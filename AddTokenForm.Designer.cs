@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class Form2
+    partial class AddTokenForm
     {
         /// <summary>
         /// Required designer variable.
@@ -79,9 +79,9 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(12, 12);
+            groupBox1.Location = new Point(12, 11);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(776, 395);
+            groupBox1.Size = new Size(776, 349);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Новый Токен";
@@ -89,204 +89,204 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(549, 304);
+            label11.Location = new Point(549, 268);
             label11.Name = "label11";
-            label11.Size = new Size(107, 17);
+            label11.Size = new Size(98, 15);
             label11.TabIndex = 21;
             label11.Text = "Дата окончания:";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(264, 304);
+            label10.Location = new Point(264, 268);
             label10.Name = "label10";
-            label10.Size = new Size(85, 17);
+            label10.Size = new Size(77, 15);
             label10.TabIndex = 20;
             label10.Text = "Дата начала:";
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(549, 326);
+            dateTimePicker2.Location = new Point(549, 288);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(221, 25);
+            dateTimePicker2.Size = new Size(221, 23);
             dateTimePicker2.TabIndex = 19;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(264, 326);
+            dateTimePicker1.Location = new Point(264, 288);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(221, 25);
+            dateTimePicker1.Size = new Size(221, 23);
             dateTimePicker1.TabIndex = 18;
             // 
             // comboBox5
             // 
             comboBox5.FormattingEnabled = true;
-            comboBox5.Location = new Point(6, 326);
+            comboBox5.Location = new Point(6, 288);
             comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(189, 25);
+            comboBox5.Size = new Size(189, 23);
             comboBox5.TabIndex = 17;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(6, 304);
+            label9.Location = new Point(6, 268);
             label9.Name = "label9";
-            label9.Size = new Size(48, 17);
+            label9.Size = new Size(46, 15);
             label9.TabIndex = 16;
             label9.Text = "Статус:";
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(104, 246);
+            textBox4.Location = new Point(104, 217);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(666, 25);
+            textBox4.Size = new Size(666, 23);
             textBox4.TabIndex = 15;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(143, 194);
+            textBox3.Location = new Point(143, 171);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(627, 25);
+            textBox3.Size = new Size(627, 23);
             textBox3.TabIndex = 14;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(6, 249);
+            label8.Location = new Point(6, 220);
             label8.Name = "label8";
-            label8.Size = new Size(92, 17);
+            label8.Size = new Size(83, 15);
             label8.TabIndex = 13;
             label8.Text = "Корневой УЦ:";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(6, 197);
+            label7.Location = new Point(6, 174);
             label7.Name = "label7";
-            label7.Size = new Size(131, 17);
+            label7.Size = new Size(124, 15);
             label7.TabIndex = 12;
             label7.Text = "Промежуточный УЦ:";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(126, 139);
+            textBox2.Location = new Point(126, 123);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(644, 25);
+            textBox2.Size = new Size(644, 23);
             textBox2.TabIndex = 11;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(6, 142);
+            label6.Location = new Point(6, 125);
             label6.Name = "label6";
-            label6.Size = new Size(114, 17);
+            label6.Size = new Size(107, 15);
             label6.TabIndex = 10;
             label6.Text = "Серийный номер:";
             // 
             // comboBox4
             // 
             comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(474, 89);
+            comboBox4.Location = new Point(474, 79);
             comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(296, 25);
+            comboBox4.Size = new Size(296, 23);
             comboBox4.TabIndex = 9;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(402, 92);
+            label5.Location = new Point(402, 81);
             label5.Name = "label5";
-            label5.Size = new Size(66, 17);
+            label5.Size = new Size(61, 15);
             label5.TabIndex = 8;
             label5.Text = "Действия:";
             // 
             // comboBox3
             // 
             comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(91, 89);
+            comboBox3.Location = new Point(91, 79);
             comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(268, 25);
+            comboBox3.Size = new Size(268, 23);
             comboBox3.TabIndex = 7;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(6, 92);
+            label4.Location = new Point(6, 81);
             label4.Name = "label4";
-            label4.Size = new Size(79, 17);
+            label4.Size = new Size(73, 15);
             label4.TabIndex = 6;
             label4.Text = "Назначение";
             // 
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(527, 37);
+            comboBox2.Location = new Point(527, 33);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(243, 25);
+            comboBox2.Size = new Size(243, 23);
             comboBox2.TabIndex = 5;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(474, 37);
+            label3.Location = new Point(474, 33);
             label3.Name = "label3";
-            label3.Size = new Size(47, 17);
+            label3.Size = new Size(43, 15);
             label3.TabIndex = 4;
             label3.Text = "Отдел:";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(227, 37);
+            textBox1.Location = new Point(227, 33);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(241, 25);
+            textBox1.Size = new Size(241, 23);
             textBox1.TabIndex = 3;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(181, 37);
+            label2.Location = new Point(181, 33);
             label2.Name = "label2";
-            label2.Size = new Size(40, 17);
+            label2.Size = new Size(37, 15);
             label2.TabIndex = 2;
             label2.Text = "ФИО:";
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(41, 37);
+            comboBox1.Location = new Point(41, 33);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(134, 25);
+            comboBox1.Size = new Size(134, 23);
             comboBox1.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(6, 37);
+            label1.Location = new Point(6, 33);
             label1.Name = "label1";
-            label1.Size = new Size(29, 17);
+            label1.Size = new Size(27, 15);
             label1.TabIndex = 0;
             label1.Text = "Тип";
             // 
             // button1
             // 
-            button1.Location = new Point(705, 413);
+            button1.Location = new Point(705, 364);
             button1.Name = "button1";
-            button1.Size = new Size(83, 25);
+            button1.Size = new Size(83, 22);
             button1.TabIndex = 1;
             button1.Text = "Добавить";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += AddTokenButton_Click;
             // 
-            // Form2
+            // AddTokenForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 397);
             Controls.Add(button1);
             Controls.Add(groupBox1);
-            Name = "Form2";
+            Name = "AddTokenForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form2";
+            Text = "AddTokenForm";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

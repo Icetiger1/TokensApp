@@ -7,21 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WinFormsApp1.Infrastucture;
+using WinFormsApp1.Infrastructure;
 using WinFormsApp1.Model;
 using WinFormsApp1.ViewModel;
 
 namespace WinFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class AddTokenForm : Form
     {
-        public Token token = new Token();
-        public ListView lv = new ListView();
-        public Form2()
+        public ListView lv = new();
+
+        public AddTokenForm()
         {
             InitializeComponent();
 
-            FillFormCreate fillForm = new FillFormCreate();
+            FillFormCreate fillForm = new();
             comboBox1.Items.AddRange(fillForm.types);
             comboBox2.Items.AddRange(fillForm.departments);
             comboBox3.Items.AddRange(fillForm.destinys);
@@ -30,9 +30,9 @@ namespace WinFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AddTokenButton_Click(object sender, EventArgs e)
         {
-            token = new Token(lv.Items.Count, 
+            Token token = new(lv.Items.Count, 
                 comboBox1.SelectedItem.ToString(),
                 textBox1.Text,
                 comboBox2.SelectedItem.ToString(),
@@ -46,7 +46,7 @@ namespace WinFormsApp1
                 dateTimePicker2.Value
                 );
 
-            Form1.Tokens.Append(token);
+            MainForm.Tokens.Append(token);
 
             this.Close();
         }
